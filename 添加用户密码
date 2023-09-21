@@ -1,0 +1,86 @@
+思科 asa
+---------------------------------------------------------------
+en
+xxxx
+config terminal
+username xxxx secret 0 xxxx
+exit
+wr
+
+华为 S6730
+----------------------------------------------------------------
+sys
+aaa
+local-user xxxx password irreversible-cipher xxxx
+local-user xxxx privilege level 1
+local-user xxxx service-type terminal ssh
+quit
+ssh user xxxx
+ssh user xxxx authentication-type password
+ssh user xxxx service-type stelnet
+quit
+save f
+
+华为 CE6857
+----------------------------------------------------------------
+sys
+aaa
+local-user xxxx password irreversible-cipher xxxx
+local-user xxxx level 1
+local-user xxxx service-type terminal ssh
+quit
+ssh user xxxx
+ssh user xxxx authentication-type password
+ssh user xxxx service-type stelnet
+commit
+quit
+save 
+y
+
+华为路由器AR6140
+----------------------------------------------------------------
+sys
+aaa
+local-user xxxx password irreversible-cipher xxxx
+local-user xxxx privilege level 1
+local-user xxxx service-type terminal ssh
+quit
+ssh user xxxx authentication-type password
+quit
+save
+y
+
+华为路由器AR2200
+----------------------------------------------------------------
+sys
+aaa
+local-user xxxx password cipher xxxx
+local-user xxxx privilege level 1
+local-user xxxx service-type terminal ssh
+quit
+ssh user xxxx authentication-type password
+quit
+save
+y
+
+
+山石防火墙
+-----------------------------------------------------------------
+admin user xxxx
+  password xxxx
+  role auditor
+  access ssh
+  access https
+  
+IPS
+---------------------------------------------------------------
+config global
+config system admin
+edit xxxx
+set password xxxx
+set accprofile super_admin_readonly
+set vdom MGT
+next
+end
+end
+
