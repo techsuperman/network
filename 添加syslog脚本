@@ -1,0 +1,38 @@
+华为
+system
+info-center loghost x.x.x.x vpn-instance mgmt
+
+思科路由器
+configure terminal
+logging on
+logging host x.x.x.x vrf Mgmt-intf
+service timestamps debug datetime localtime show-timezone msec
+service timestamps log datetime localtime show-timezone msec
+logging facility local7
+logging trap 7
+
+思科交换机
+configure terminal
+logging on
+logging host x.x.x.x vrf Mgmt-vrf
+service timestamps debug datetime localtime show-timezone msec
+service timestamps log datetime localtime show-timezone msec
+logging facility local7
+logging trap 7
+
+思科防火墙
+configure terminal
+logging enable
+logging host MGT x.x.x.x
+
+山石防火墙
+logging syslog x.x.x.x vrouter mgt-vr udp 514 type event
+logging syslog x.x.x.x vrouter mgt-vr udp 514 type config
+
+飞塔IPS
+config global
+config log syslogd setting
+set status enable
+set server x.x.x.x
+end	
+end
