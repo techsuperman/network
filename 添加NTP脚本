@@ -1,0 +1,37 @@
+华为S交换机 路由器
+sys
+ntp-service unicast-server x.x.x.x vpn-instance mgmt preference
+ntp-service unicast-server x.x.x.x vpn-instance mgmt
+sa f
+
+华为CE交换机
+sys
+ntp unicast-server x.x.x.x vpn-instance mgmt preferred
+ntp unicast-server x.x.x.x vpn-instance mgmt
+commit
+quit
+sa
+y
+
+思科路由器
+conf t
+ntp server vrf Mgmt-intf x.x.x.x prefer
+ntp server vrf Mgmt-intf x.x.x.x
+exit
+wr
+
+
+思科交换机
+conf t
+ntp server vrf Mgmt-vrf x.x.x.x prefer
+ntp server vrf Mgmt-vrf x.x.x.x 
+exit
+wr
+
+
+
+山石
+conf
+ntp enable
+ntp server x.x.x.x vrouter mgt-vr prefer
+ntp server x.x.x.x vrouter mgt-vr
