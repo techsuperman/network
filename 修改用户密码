@@ -1,0 +1,63 @@
+华为S交换机
+sys
+aaa
+local-user xxxx password irreversible-cipher xxxx
+xxxx
+y
+quit
+quit
+sa f
+
+
+华为CE交换机
+sys
+aaa
+local-user xxxx password irreversible-cipher xxxx
+xxxx
+commit
+quit
+quit
+sa
+y
+
+华为路由器AR6140
+--------------------------------------------------------------
+sys
+aaa
+local-user xxxx password irreversible-cipher xxxx
+xxxx
+quit
+quit
+save
+y
+
+华为路由器AR2200
+--------------------------------------------------------------
+sys
+aaa
+local-user xxxx password cipher xxxx
+quit
+quit
+save
+y
+
+山石
+conf
+admin user hillstone
+password xxxx
+exit
+save
+yy
+
+思科 asa
+en
+xxxx
+config terminal
+username xxxx secret 0 xxxx
+exit
+wr
+
+思科路由器
+
+
+
