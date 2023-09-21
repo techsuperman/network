@@ -1,0 +1,54 @@
+华为S交换机
+sys
+aaa
+local-aaa-user password policy administrator
+password history record number 3
+password expire 90
+quit
+quit
+quit
+sa f
+
+华为CE交换机
+sys
+aaa
+local-user policy password complexity-enhance
+local-user policy password expire 90 prompt 30
+commit
+quit
+quit
+sa
+y
+
+华为路由器AR6140
+sys
+aaa
+local-aaa-user password policy administrator
+password history record number 3
+password expire 90
+quit
+quit
+quit
+sa
+y
+
+
+华为路由器AR2200
+sys
+aaa
+local-aaa-user password policy administrator
+password history record number 3
+password expire 90
+quit
+quit
+quit
+sa
+y
+
+
+
+山石
+password-policy
+admin password-expiration 90
+
+思科
